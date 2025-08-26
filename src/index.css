@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme {
+  --color-primary: #0A192F;
+  --color-dark: #1F3346;
+  --color-medium: #567F93;
+  --color-light: #6EC9F6;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
