@@ -17,26 +17,24 @@ const NewsCard = ({ cryptoNews }) => {
   const displayDate = publishedAt
     ? new Date(publishedAt).toLocaleDateString()
     : "";
+  
 
   if (!title || !url) return null;
 
   return (
     <div className="flex flex-col dark:bg-dark bg-gray-200 rounded-xl overflow-hidden shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
-      <Link to={url} target="_blank" className="flex flex-col h-full">
+      <Link
+        to={url}
+        target="_blank"
+        className="flex flex-col h-full"
+      >
         <div className="relative w-full aspect-video">
-          {imageUrl ? (
-            <img
-              src={imageUrl}
-              alt={title}
-              className="w-full h-full object-cover"
-            />
-          ) : (
-            <img
-              src={assets.news_image}
-              alt={title}
-              className="w-full h-full object-cover"
-            />
-          )}
+          
+          <img
+            src={imageUrl ? imageUrl : assets.news_image}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="p-5 flex flex-col justify-between h-full">
           <div>

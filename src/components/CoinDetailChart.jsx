@@ -99,7 +99,7 @@ const CoinDetailChart = ({ coinId }) => {
               <XAxis
                 dataKey="date"
                 stroke="#1a202c" // text for light
-                className="dark:stroke-gray-300" // text for dark
+                className="dark:stroke-gray-300" 
               />
 
               {/* Y Axis */}

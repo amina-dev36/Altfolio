@@ -71,6 +71,7 @@ const CoinContextProvider = (props) => {
         `https://gnews.io/api/v4/search?q=bitcoin&lang=en&token=${news_api}`
       );
       if(response.data) {
+        console.log(response.data);
         setCryptoNews(response.data.articles);
       }
       
