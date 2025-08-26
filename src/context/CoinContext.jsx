@@ -62,15 +62,16 @@ const CoinContextProvider = (props) => {
     }
   };
 
-  const news_api = import.meta.env.VITE_NEWS_API_KEY;
+  const news_api = import.meta.env.VITE_GNEWS_API_KEY;
 
   const fetchCryptoNews = async () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://newsapi.org/v2/everything?q=bitcoin&apiKey=${news_api}`
+        `https://gnews.io/api/v4/search?q=bitcoin&lang=en&token=${news_api}`
       );
       if(response.data) {
+        console.log(response.data);
         setCryptoNews(response.data.articles);
       }
       

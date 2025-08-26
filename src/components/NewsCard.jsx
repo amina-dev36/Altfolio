@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { assets } from "../assets/assets.js";
 
 const NewsCard = ({ cryptoNews }) => {
   // channing
@@ -8,7 +9,7 @@ const NewsCard = ({ cryptoNews }) => {
   const sourceName = cryptoNews.source?.name;
   const author = cryptoNews.author;
   const url = cryptoNews.url;
-  const imageUrl = cryptoNews.urlToImage;
+  const imageUrl = cryptoNews.image;
   const publishedAt = cryptoNews.publishedAt;
 
   // Functions to handle missing data
@@ -16,24 +17,26 @@ const NewsCard = ({ cryptoNews }) => {
   const displayDate = publishedAt
     ? new Date(publishedAt).toLocaleDateString()
     : "";
-  const displayImage =
-    imageUrl || "https://placehold.co/600x400/1E293B/E2E8F0?text=No+Image";
 
   if (!title || !url) return null;
 
   return (
     <div className="flex flex-col dark:bg-dark bg-gray-200 rounded-xl overflow-hidden shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
-      <Link
-        to={url}
-        target="_blank"
-        className="flex flex-col h-full"
-      >
+      <Link to={url} target="_blank" className="flex flex-col h-full">
         <div className="relative w-full aspect-video">
-          <img
-            src={displayImage}
-            alt={title}
-            className="w-full h-full object-cover"
-          />
+          {imageUrl ? (
+            <img
+              src={imageUrl}
+              alt={title}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <img
+              src={assets.news_image}
+              alt={title}
+              className="w-full h-full object-cover"
+            />
+          )}
         </div>
         <div className="p-5 flex flex-col justify-between h-full">
           <div>
