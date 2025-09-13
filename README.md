@@ -98,8 +98,8 @@ Contributions are welcome! Please fork the repo and submit a PR.
 
 👩‍💻 Built by Thi Ri
 
-GitHub: https://github.com/thiri-dev
+GitHub: https://github.com/amina-dev36
 
-LinkedIn: https://www.linkedin.com/in/thi-ri-a5a2a736b/
+LinkedIn: https://www.linkedin.com/in/amina-farah-a5a2a736b/
 
 ✨ If you like this project, don’t forget to star ⭐ the repo!
